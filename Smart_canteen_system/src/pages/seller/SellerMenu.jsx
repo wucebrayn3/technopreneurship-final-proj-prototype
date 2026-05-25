@@ -95,9 +95,9 @@ const SellerMenu = () => {
   };
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Menu Management</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Menu Management</h1>
         <button onClick={() => openForm()}
           className="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors">+ Add Item</button>
       </div>
@@ -105,7 +105,7 @@ const SellerMenu = () => {
       {showForm && (
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-6">
           <h2 className="text-base font-semibold text-gray-900 mb-4">{editId !== null ? "Edit Item" : "New Menu Item"}</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Item Name</label>
               <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -191,6 +191,7 @@ const SellerMenu = () => {
             <p className="text-gray-400 text-sm">Click "+ Add Item" to add your first menu item.</p>
           </div>
         ) : (
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-100">
@@ -234,6 +235,7 @@ const SellerMenu = () => {
               ))}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>

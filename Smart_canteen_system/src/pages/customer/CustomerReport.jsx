@@ -17,7 +17,7 @@ const CustomerReport = () => {
   };
 
   return (
-    <div className="px-10 py-8 max-w-2xl">
+    <div className="px-4 sm:px-6 lg:px-10 py-8 max-w-2xl">
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Report an Issue</h1>
       <p className="text-sm text-gray-500 mb-6">Tell us what went wrong \u2014 our admin team responds within 24h.</p>
       {submitted && (

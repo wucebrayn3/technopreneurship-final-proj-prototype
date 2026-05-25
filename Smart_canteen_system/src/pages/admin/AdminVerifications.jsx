@@ -25,10 +25,10 @@ const AdminVerifications = ({ onReviewMenu }) => {
   const pendingCount = verifications.filter((v) => v.status === "Pending").length;
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Verifications</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Verifications</h1>
           {pendingCount > 0 && <p className="text-sm text-yellow-600 mt-1">{'\u23F3'} {pendingCount} pending seller registration(s)</p>}
         </div>
       </div>

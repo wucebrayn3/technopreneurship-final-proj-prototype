@@ -37,9 +37,9 @@ const SellerOrders = () => {
   const filtered = filterStatus === "All" ? orders : orders.filter((o) => o.status === filterStatus);
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Orders</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Orders</h1>
         <div className="flex items-center gap-2 bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-full">
           <span>{'\u{1F550}'}</span>Pickup {pickupWindow}
         </div>

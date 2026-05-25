@@ -27,11 +27,11 @@ const SellerDashboard = () => {
   };
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-start justify-between mb-8">
         <div>
           <p className="text-sm text-gray-500">Welcome back,</p>
-          <h1 className="text-3xl font-bold text-gray-900">{user?.store_name || user?.username || "Store"}</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{user?.store_name || user?.username || "Store"}</h1>
           <span className="inline-block mt-1 text-xs font-medium bg-purple-50 text-purple-600 px-2.5 py-0.5 rounded-full capitalize">{user?.role || "seller"}</span>
         </div>
         <div className="flex items-center gap-2 bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-full">
@@ -49,7 +49,7 @@ const SellerDashboard = () => {
         </div>
       ) : (
         <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
               { label: "Orders Today", value: stats.ordersToday.toString(), icon: "\u{1F9FE}" },
               { label: "Revenue Today", value: `\u20B1${stats.revenueToday.toLocaleString()}`, icon: "\u{1F4B0}" },
@@ -64,7 +64,7 @@ const SellerDashboard = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
               <h2 className="text-base font-semibold text-gray-900 mb-4">Recent Orders</h2>
               <div className="flex flex-col gap-3">

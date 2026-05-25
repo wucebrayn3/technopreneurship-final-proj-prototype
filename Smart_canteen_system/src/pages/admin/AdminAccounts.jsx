@@ -24,8 +24,8 @@ const AdminAccounts = () => {
   });
 
   return (
-    <div className="px-10 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Accounts</h1>
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
+      <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Accounts</h1>
       <div className="flex items-center gap-4 mb-6">
         <input type="text" placeholder="Search by name or email..." value={search} onChange={(e) => setSearch(e.target.value)}
           className="border border-gray-200 rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-green-500 w-72" />
@@ -46,6 +46,7 @@ const AdminAccounts = () => {
             <p className="text-gray-400 text-sm">Try adjusting your search or filter.</p>
           </div>
         ) : (
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-100">
@@ -81,6 +82,7 @@ const AdminAccounts = () => {
               ))}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>

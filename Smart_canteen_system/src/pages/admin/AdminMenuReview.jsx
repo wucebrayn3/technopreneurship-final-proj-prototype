@@ -14,13 +14,13 @@ const AdminMenuReview = ({ sellerId, onBack }) => {
   }, [sellerId]);
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-center gap-4 mb-8">
         <button onClick={onBack}
           className="text-sm text-gray-500 hover:text-gray-800 transition-colors">&larr; Back to Verifications</button>
       </div>
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-gray-900">Menu Review</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Menu Review</h1>
         {sellerName && <p className="text-sm text-gray-500 mt-1">Seller: {sellerName}</p>}
       </div>
       {items.length === 0 ? (

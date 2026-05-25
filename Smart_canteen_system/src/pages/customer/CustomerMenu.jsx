@@ -153,7 +153,7 @@ const CustomerMenu = ({ setCartCount }) => {
   const sellerName = selectedSeller?.store_name || selectedSeller?.username || "";
 
   return (
-    <div className="flex-1 px-10 py-8">
+    <div className="flex-1 px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-start justify-between mb-6">
         <h1 className="text-2xl font-bold text-gray-900">
           {selectedSeller ? (
@@ -193,7 +193,7 @@ const CustomerMenu = ({ setCartCount }) => {
               <p className="text-gray-400 text-sm max-w-xs">No canteens are registered yet. Check back later!</p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {sellers.map((seller) => (
                 <button key={seller.id} onClick={() => loadMenu(seller.id)}
                   className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 text-left hover:border-green-300 hover:shadow-md transition-all">
@@ -227,7 +227,7 @@ const CustomerMenu = ({ setCartCount }) => {
               <button onClick={goBackToSellers} className="text-green-600 hover:underline text-sm font-medium">{'\u2190'} Back to sellers</button>
             </div>
           ) : (
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((item) => (
                 <div key={item.id} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col gap-3">
                   <div className="relative">

@@ -42,10 +42,10 @@ const SellerInventory = () => {
   const lowStockCount = inventory.filter((i) => i.quantity <= i.low_stock_threshold).length;
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Inventory</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Inventory</h1>
           {lowStockCount > 0 && <p className="text-sm text-red-500 mt-1">{'\u26A0\uFE0F'} {lowStockCount} item(s) running low</p>}
         </div>
         <button onClick={() => { setShowForm(true); setEditId(null); setForm(emptyForm); }}
@@ -55,7 +55,7 @@ const SellerInventory = () => {
       {showForm && (
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-6">
           <h2 className="text-base font-semibold text-gray-900 mb-4">{editId !== null ? "Edit Item" : "New Inventory Item"}</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Item Name</label>
               <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -98,6 +98,7 @@ const SellerInventory = () => {
             <p className="text-gray-400 text-sm">Click "+ Add Item" to start tracking your ingredients.</p>
           </div>
         ) : (
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-100">
@@ -132,6 +133,7 @@ const SellerInventory = () => {
               })}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>

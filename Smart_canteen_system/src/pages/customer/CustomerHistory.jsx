@@ -14,7 +14,7 @@ const CustomerHistory = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 px-10 py-8">
+    <div className="min-h-screen bg-gray-50 px-4 sm:px-6 lg:px-10 py-8">
       <h1 className="text-2xl font-bold text-gray-900 mb-6">Order History</h1>
       {loading ? (
         <div className="text-center py-16 text-gray-400">Loading...</div>

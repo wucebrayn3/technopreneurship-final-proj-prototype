@@ -21,10 +21,10 @@ const AdminReports = () => {
   const filtered = filterStatus === "All" ? reports : reports.filter((r) => r.status === filterStatus);
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Reports</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Reports</h1>
           <p className="text-sm text-red-500 mt-1">{'\u{1F6A9}'} {reports.filter((r) => r.status === "Open").length} open report(s)</p>
         </div>
       </div>

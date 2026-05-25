@@ -38,9 +38,9 @@ const SellerReports = () => {
   const maxRevenue = Math.max(...dailySalesArray.map((d) => d.revenue), 1);
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Reports</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Reports</h1>
       </div>
 
       {loading ? (
@@ -53,7 +53,7 @@ const SellerReports = () => {
         </div>
       ) : (
         <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { label: "Total Revenue", value: `\u20B1${totalRevenue.toLocaleString()}`, icon: "\u{1F4B0}" },
               { label: "Total Orders", value: totalOrders.toString(), icon: "\u{1F9FE}" },
@@ -82,6 +82,7 @@ const SellerReports = () => {
 
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
             <h2 className="text-base font-semibold text-gray-900 mb-4">Best Sellers</h2>
+            <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-100">
@@ -103,6 +104,7 @@ const SellerReports = () => {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       )}

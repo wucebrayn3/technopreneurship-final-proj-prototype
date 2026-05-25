@@ -23,11 +23,11 @@ const CustomerHome = ({ setActiveNav }) => {
   };
 
   return (
-    <div className="px-10 py-8">
+    <div className="px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex items-start justify-between mb-8">
         <div>
           <p className="text-sm text-gray-500">Welcome back,</p>
-          <h1 className="text-3xl font-bold text-gray-900">{user?.username || "Customer"}</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{user?.username || "Customer"}</h1>
           <span className="inline-block mt-1 text-xs font-medium bg-blue-50 text-blue-600 px-2.5 py-0.5 rounded-full capitalize">{user?.role || "customer"}</span>
         </div>
         <div className="flex items-center gap-2 bg-green-700 text-white text-sm font-medium px-4 py-2 rounded-full">
@@ -65,7 +65,7 @@ const CustomerHome = ({ setActiveNav }) => {
             </div>
           )}
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { label: "Orders this week", value: stats.weekOrders.toString(), icon: "\u{1F9FE}" },
               { label: "Total spent", value: `\u20B1${stats.totalSpent}`, icon: "\u{1F4B0}" },
